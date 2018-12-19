@@ -1,0 +1,45 @@
+﻿<Window x:Class="DatabaseWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatabaseWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Width="900" Height="600"
+        xmlns:views="clr-namespace:DatabaseWPF.Views">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ReourceCategory\StylesDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="367*"/>
+            <ColumnDefinition Width="370*"/>
+        </Grid.ColumnDefinitions>
+
+        <views:Login x:Name="vLogin" Visibility="Hidden" Grid.Column="1"/>
+        <views:Registration x:Name="vRegistration" Visibility="Hidden" Grid.Column="1"/>
+        <views:CarForm x:Name="vCarForm" Visibility="Hidden" Grid.Column="1"/>
+        <views:ProductForm x:Name="vProductForm" Visibility="Hidden" Grid.Column="1"/>
+        <views:UsersList x:Name="vUserList" Visibility="Hidden" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <views:CarsList x:Name="vCarsList" Visibility="Hidden" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <views:ProductsList x:Name="vProductsList" Visibility="Hidden" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <StackPanel HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="155">
+            <Button Name="bNewUser"  Content="New User" Height="76" Click="bNewUser_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+            <Button Name="bUserList" Content="Users List" Height="76" Click="bUserList_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+            <Button Name="bNewProdyct" Content="New Product" Height="76" Click="bNewProdyct_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+            <Button Name="bProductList" Content="Products List" Height="76" Click="bProductList_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+            <Button Name="bNewCar"  Content="New Car" Height="76" Click="bNewCar_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+            <Button Name="bCarList"  Content="Cars List" Height="76" Click="bCarList_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+            <Button Name="bExit"  Content="Exit" Height="76" Click="bExit_Click" Style="{StaticResource MainMenuButtonStyle}"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

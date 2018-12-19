@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="DatabaseWPF.Views.UsersList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DatabaseWPF.Views"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView Margin="10" Name="lvList" Grid.Column="1" Grid.ColumnSpan="2">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Click="Button_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Login" Width="200" DisplayMemberBinding="{Binding Login}" />
+                    <GridViewColumn Header="Password" Width="200" DisplayMemberBinding="{Binding Password}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

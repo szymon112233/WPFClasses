@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="DatabaseWPF.Views.Registration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DatabaseWPF.Views"
+             mc:Ignorable="d">
+    <Grid Height="141" Width="226">
+        <TextBlock Text="Registration" Margin="44,0,119,125" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="Login" Margin="0,24,0,101" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Name="tbLogin" Margin="100,21,51,104"/>
+        <TextBlock Text="Password" Margin="0,39,0,86" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <PasswordBox Name="tbPassword" Margin="100,40,51,86" />
+        <TextBlock Text="Confirm Password" Margin="0,57,0,68" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <PasswordBox Name="tbConfirmPassword" Margin="100,57,51,68" />
+
+        <Button Name="bRegister" Click="bRegister_Click" Margin="44,78,106,41">Register</Button>
+    </Grid>
+</UserControl>
